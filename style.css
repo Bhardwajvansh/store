@@ -244,23 +244,44 @@ p{
 /* media query */
 
 @media only screen and (max-width:800px) {
-    .menu{
-        display: block;
-    }
     nav ul{
         position: absolute;
         top: 70px;
         left: 0;
-        background: #333;
+        background: rgb(48, 47, 47);
         width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
     }
     nav ul li{
         display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin: 10px 0;
+        margin-right: 20px;
     }
     nav ul li a{
         color: white;
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .row,.row-2{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4,.foot-1,.foot-2,.foot-3,.foot-4{
+        flex-basis:100%;
+    }
+    .foot-1,.foot-2,.foot-3,.foot-4{
+        margin-bottom: 20px;
+    }
+    .app-logo{
+        display: flex;
+        justify-content: center;
+    }
+    .foot-2 img{
+        margin: 10px;
     }
 }
